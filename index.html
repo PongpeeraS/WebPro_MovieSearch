@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Movie Search</title>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!--<script src="js/bootstrap.js"></script>-->
+<script src="backend.js"></script>
+
+<!--Fadein-out script for different services-->
+
+
+
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/box.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container" id="outer" style="color:#FFF; background-color:rgb(228, 0, 0);">
+
+                <div class="row">
+                        <div class="col-sm-8">
+                        <h1>Movie Search</h1>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                                <span class="pull-right">
+                                <form id="search-form" class="form-inline" role="form" method="post" action="" target="_blank" style="align-content:right"></form>
+                                        <div class="input-group">
+                                                <input type="text" class="form-control search-form" placeholder="Search your movie" id="search-Box">
+                                                <!--DO NOT NEED TRAILING SLASH "/" As HTML5 FORMS SLASHES ARE NO LONGER REQUIRED--> <span class="input-group-btn">
+                                
+                                                <button type="button" class="btn btn-myButton" id="search-Button">
+                                                        <span class="glyphicon glyphicon-search"></span> Search
+                                                <!-- Receives the keyword query, goes to searching function on click-->
+                                                </button>
+                                        
+                                        </div>
+                                </form>
+                                </span>
+                        </div>
+                </div>
+
+
+                <div class="wrapper" id="Bigdiv" style="display:none; background-color:#ff7d7dab;">
+                        
+                        <div id="div1" onclick="showGoogle()">
+                                
+                                <img src="icon/PNG/128/social-009_google_white.png" id="iconG" onclick="showGoogle()">
+                                <br/>
+                                <button type="buttonG" class="btn-myMyButton" id="buttonG" onclick="showGoogle()">
+                                        <span class="glyphicon glyphicon-search"></span> Google Search
+                                </button>
+                        </div>
+                        <div id="div2" onclick="showSpotify()">
+                                
+                                <img src="icon/PNG/128/social-043_spotify_white.png" id="iconS" onclick="showSpotify()">
+                                <br />
+                                <button type="buttonS" class="btn-myMyButton" id="buttonS" onclick="showSpotify()">
+                                        <span class="glyphicon glyphicon-search"></span> Spotify
+                                </button>
+                        </div>
+                        <div id="div3" onclick="showTwitter()">
+                                
+                                <img src="icon/PNG/128/social-003_twitter_white.png" id="iconT" onclick="showTwitter()">
+                                <br/>
+                                <button type="buttonT" class="btn-myMyButton" id="buttonT" onclick="showTwitter()">
+                                        <span class="glyphicon glyphicon-search"></span> Twitter
+                                </button>
+                        </div>
+                        <div id="div4" onclick="showYouTube()">
+                                
+                                <img src="icon/PNG/128/social-018_youtube_white.png" id="iconY" onclick="showYouTube()">
+                                <br/>
+                                <button type="buttonY" class="btn-myMyButton" id="buttonY" onclick="showYouTube()">
+                                        <span class="glyphicon glyphicon-search"></span> YouTube
+                                </button>        
+                        </div>
+                </div>
+
+                <div>
+                        <!-- Results will be shown in "#results" dev -->
+                        <div class="container" id="googleResult" style="display:none">
+                                
+                                <div class="container" id="divG" style="display:none">
+                                        <h2>Google Search</h2>
+                                </div>
+                                
+                                <div id="resultsGG"></div>
+                        </div>
+
+                        <div class="container" id="spotifyResult" style="display:none">
+                                <div class="container" id="divS" style="display:none">
+                                        <h2>Spotify Playlist</h2>
+                                </div>
+
+                                <div id="resultsSP"></div>
+                        </div>
+                        
+                        <div class="container" id="twitterResult" style="display:none">
+                                <div class="container" id="divT" style="display:none">
+                                        <h2>Twitter Tweets</h2>
+                                </div>
+
+                                <div id="resultsTW"></div>
+                        </div>
+                
+                        <div class="container" id="youtubeResult" style="display:none">
+                                <div class="container" id="divY" style="display:none">
+                                        <h2>YouTube Videos</h2>
+                                </div>
+
+                                <div id="resultsYT"></div> 
+                        </div>
+                </div>
+
+        </div>
+</body>
+</html>
